@@ -97,42 +97,43 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .edit-btn {
-  background-color: #969699;
+  background-color: #6b6b70;
+  color: white;
 }
 
-.delete-btn{
-    background-color: red;
-
+.delete-btn {
+  background-color: #e00505;
+  color: white;
 }
 
-.edit-section {
-  margin-top: 15px;
-  display: flex;
-  gap: 10px;
+.edit-btn:hover {
+  background-color: #6b6b6f;
 }
 
-.edit-section select {
-  padding: 8px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+.delete-btn:hover {
+  background-color: #dc2626;
 }
 
 .save-status-btn {
+  margin-right: 40px;
+  margin-top: 15px;
   padding: 8px 15px;
   border: none;
   border-radius: 5px;
-  background: green;
+  background-color: green;
   color: white;
   cursor: pointer;
 }
 
-.edit-btn {
+.cancel-btn {
   padding: 8px 15px;
   border: none;
   border-radius: 5px;
+  background-color: #555;
+  color: white;
   cursor: pointer;
-  margin-top: 10px;
 }

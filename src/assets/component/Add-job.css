@@ -59,9 +59,9 @@
 .save-btn {
   width: 100%;
   padding: 14px;
-
+  margin-right: 10%;
   border: none;
-  border-radius: 7px;
+  border-radius:11px;
 
   background-color: #1f2937;
   color: white;
