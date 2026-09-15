@@ -1,0 +1,121 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.job-form {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.job-form h2 {
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  gap: 15px;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+}
+
+.input-container input:focus {
+  border-color: #333;
+}
+
+.input-container button {
+  padding: 12px 20px;
+  border: none;
+  background-color: #111;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.input-container button:hover {
+  background-color: #333;
+}
+
+.jobs-section h2 {
+  margin-bottom: 20px;
+}
+
+.job-card {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.job-card h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.job-card p {
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.status {
+  display: inline-block;
+  background-color: #e8f5e9;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.empty-message {
+  color: #777;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 600px) {
+  .input-container {
+    flex-direction: column;
+  }
+
+  .input-container button {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}

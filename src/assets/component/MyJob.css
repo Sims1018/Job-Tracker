@@ -1,0 +1,138 @@
+.my-jobs-page {
+  min-height: 100vh;
+  padding: 40px;
+  background-color: #f5f6fa;
+}
+
+.jobs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.jobs-header h1 {
+  margin-bottom: 8px;
+}
+
+.jobs-header p {
+  color: #666;
+  
+}
+
+.add-job-btn {
+  padding: 12px 20px;
+  background-color: #111827;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.jobs-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.job-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.job-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.job-card h2 {
+  font-size: 22px;
+}
+
+.job-card h3 {
+  margin-top: 15px;
+  font-size: 17px;
+}
+
+.location {
+  margin-top: 10px;
+  color: #666;
+}
+
+.job-status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.applied {
+  background-color: #dbeafe;
+}
+
+.interview {
+  background-color: #fef3c7;
+}
+
+.offer {
+  background-color: #dcfce7;
+}
+
+.rejected {
+  background-color: #fee2e2;
+}
+
+.job-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #969699;
+}
+
+.delete-btn{
+    background-color: red;
+
+}
+
+.edit-section {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.edit-section select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.save-status-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  background: green;
+  color: white;
+  cursor: pointer;
+}
+
+.edit-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
