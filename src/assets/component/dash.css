@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +12,6 @@ body {
   min-height: 100vh;
   background-color: #f5f6fa;
 }
-
 
 /* ================= NAVBAR ================= */
 
@@ -43,14 +41,12 @@ body {
   display: flex;
   align-items: center;
   gap: 20px;
-
   font-size: 18px;
 }
 
 .notification {
   cursor: pointer;
 }
-
 
 /* ================= MAIN LAYOUT ================= */
 
@@ -59,20 +55,24 @@ body {
   min-height: calc(100vh - 70px);
 }
 
-
 /* ================= SIDEBAR ================= */
 
 .sidebar {
   width: 230px;
   background-color: white;
   padding: 25px 15px;
-
   border-right: 1px solid #ddd;
 }
 
 .menu-item {
+  display: flex;
+  align-items: center;
+
   padding: 15px;
   margin-bottom: 10px;
+
+  text-decoration: none;
+  color: #333;
 
   border-radius: 8px;
 
@@ -95,7 +95,6 @@ body {
   margin-left: 10px;
 }
 
-
 /* ================= CONTENT ================= */
 
 .content {
@@ -113,16 +112,13 @@ body {
   margin-bottom: 35px;
 }
 
-
 /* ================= STATISTICS ================= */
 
 .stats-container {
   display: grid;
-
   grid-template-columns: repeat(4, 1fr);
 
   gap: 20px;
-
   margin-bottom: 40px;
 }
 
@@ -145,7 +141,6 @@ body {
   font-size: 32px;
 }
 
-
 /* ================= RECENT APPLICATIONS ================= */
 
 .recent-applications {
@@ -166,7 +161,6 @@ body {
   display: flex;
 
   justify-content: space-between;
-
   align-items: center;
 
   padding: 18px 0;
@@ -186,7 +180,6 @@ body {
   color: #777;
 }
 
-
 /* ================= STATUS ================= */
 
 .status {
@@ -195,40 +188,61 @@ body {
   border-radius: 20px;
 
   font-size: 14px;
+  font-weight: 500;
 }
 
 .interview {
   background-color: #dbeafe;
+  color: #1d4ed8;
 }
 
 .applied {
   background-color: #fef3c7;
+  color: #92400e;
 }
 
 .offer {
   background-color: #dcfce7;
+  color: #166534;
 }
 
+.rejected {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
 
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 900px) {
-
   .stats-container {
     grid-template-columns: repeat(2, 1fr);
   }
-
 }
 
+/* ================= MOBILE ================= */
 
 @media (max-width: 600px) {
-
   .navbar {
     padding: 0 20px;
   }
 
+  .logo {
+    font-size: 20px;
+  }
+
+  .user-section {
+    font-size: 15px;
+    gap: 10px;
+  }
+
   .sidebar {
     width: 70px;
+    padding: 25px 10px;
+  }
+
+  .menu-item {
+    justify-content: center;
+    padding: 15px 10px;
   }
 
   .menu-item span {
@@ -239,12 +253,20 @@ body {
     padding: 20px;
   }
 
+  .content h1 {
+    font-size: 25px;
+  }
+
   .stats-container {
     grid-template-columns: 1fr;
   }
 
-  .user {
-    display: none;
+  .job-item {
+    align-items: flex-start;
+    gap: 15px;
   }
 
+  .status {
+    white-space: nowrap;
+  }
 }

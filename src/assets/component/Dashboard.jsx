@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./dash.css";
 
 function Dashboard({ jobs }) {
@@ -21,6 +22,7 @@ function Dashboard({ jobs }) {
 
       {/* Navbar */}
       <nav className="navbar">
+
         <div className="logo">
           ☰ <span>JobTracker</span>
         </div>
@@ -29,36 +31,35 @@ function Dashboard({ jobs }) {
           <span>🔔</span>
           <span>👤 Ranu</span>
         </div>
-      </nav>
 
+      </nav>
 
       <div className="main-container">
 
         {/* Sidebar */}
         <aside className="sidebar">
 
-          <div className="menu-item active">
+          <Link to="/" className="menu-item active">
             🏠 <span>Dashboard</span>
-          </div>
+          </Link>
 
-          <div className="menu-item">
+          <Link to="/add-job" className="menu-item">
             ➕ <span>Add Job</span>
-          </div>
+          </Link>
 
-          <div className="menu-item">
+          <Link to="/my-jobs" className="menu-item">
             💼 <span>My Jobs</span>
-          </div>
+          </Link>
 
-          <div className="menu-item">
+          <Link to="/analytics" className="menu-item">
             📊 <span>Analytics</span>
-          </div>
+          </Link>
 
-          <div className="menu-item">
+          <Link to="/profile" className="menu-item">
             👤 <span>Profile</span>
-          </div>
+          </Link>
 
         </aside>
-
 
         {/* Content */}
         <main className="content">
@@ -69,7 +70,6 @@ function Dashboard({ jobs }) {
             Track and manage your job applications.
           </p>
 
-
           {/* Statistics */}
           <div className="stats-container">
 
@@ -78,18 +78,15 @@ function Dashboard({ jobs }) {
               <h2>{totalJobs}</h2>
             </div>
 
-
             <div className="stat-card">
               <p>Applied</p>
               <h2>{appliedJobs}</h2>
             </div>
 
-
             <div className="stat-card">
               <p>Interview</p>
               <h2>{interviewJobs}</h2>
             </div>
-
 
             <div className="stat-card">
               <p>Offer</p>
@@ -97,7 +94,6 @@ function Dashboard({ jobs }) {
             </div>
 
           </div>
-
 
           {/* Recent Applications */}
           <div className="recent-applications">
@@ -108,6 +104,7 @@ function Dashboard({ jobs }) {
               <p>No jobs added yet!</p>
             ) : (
               jobs.slice(-3).reverse().map((job) => (
+
                 <div className="job-item" key={job.id}>
 
                   <div>
@@ -115,11 +112,14 @@ function Dashboard({ jobs }) {
                     <p>{job.position}</p>
                   </div>
 
-                  <span className={`status ${job.status.toLowerCase()}`}>
+                  <span
+                    className={`status ${job.status.toLowerCase()}`}
+                  >
                     {job.status}
                   </span>
 
                 </div>
+
               ))
             )}
 
@@ -128,6 +128,7 @@ function Dashboard({ jobs }) {
         </main>
 
       </div>
+
     </div>
   );
 }

@@ -1,19 +1,52 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Dashboard from "./assets/component/Dashboard";
 import AddJob from "./assets/component/AddJob";
-import MyJob from "./assets/component/MyJob";
+import MyJobs from "./assets/component/MyJob";
 
 function App() {
-  const [jobs, setJobs] = useState([]);
+  // LocalStorage se jobs load karna
+  const [jobs, setJobs] = useState(() => {
+    const savedJobs = localStorage.getItem("jobs");
+
+    return savedJobs ? JSON.parse(savedJobs) : [];
+  });
+
+  // Jobs change hone par LocalStorage me save karna
+  useEffect(() => {
+    localStorage.setItem("jobs", JSON.stringify(jobs));
+  }, [jobs]);
 
   return (
-    <div>
-      <Dashboard jobs={jobs} />
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={<Dashboard jobs={jobs} />}
+        />
 
-      <AddJob jobs={jobs} setJobs={setJobs} />
+        <Route
+          path="/add-job"
+          element={
+            <AddJob
+              jobs={jobs}
+              setJobs={setJobs}
+            />
+          }
+        />
 
-      <MyJob jobs={jobs} setJobs={setJobs} />
-    </div>
+        <Route
+          path="/my-jobs"
+          element={
+            <MyJobs
+              jobs={jobs}
+              setJobs={setJobs}
+            />
+          }
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

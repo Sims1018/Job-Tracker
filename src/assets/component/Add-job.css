@@ -6,12 +6,13 @@
   padding: 40px;
   min-height: 100vh;
   background-color: #f5f6fa;
-  margin-left: 10%;
+  margin-left: 25%;
 }
 
 .add-job-page h1 {
   margin-bottom: 30px;
-  margin-right: 10%;
+  margin-right: 40%;
+
 }
 
 .add-job-form {
