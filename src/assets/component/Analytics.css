@@ -1,0 +1,88 @@
+
+.analytics-page {
+  min-height: 100vh;
+  padding: 35px;
+  background-color: #f5f6fa;
+}
+
+.analytics-page h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.analytics-page > p {
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.analytics-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.analytics-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.analytics-card h3 {
+  color: #777;
+  font-size: 16px;
+}
+
+.analytics-card h2 {
+  font-size: 30px;
+  margin-top: 12px;
+}
+
+.analytics-card p {
+  color: #2563eb;
+  margin-top: 8px;
+}
+
+.progress-heading {
+  margin: 35px 0 20px;
+}
+
+.progress-item {
+  margin-bottom: 20px;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.progress-bar {
+  height: 12px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #2563eb;
+  border-radius: 10px;
+  transition: width 0.4s;
+}
+
+@media (max-width: 700px) {
+  .analytics-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .analytics-page {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .analytics-container {
+    grid-template-columns: 1fr;
+  }
+}

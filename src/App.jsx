@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./assets/component/Dashboard";
 import AddJob from "./assets/component/AddJob";
 import MyJobs from "./assets/component/MyJob";
+import Analytics from "./assets/component/Analytics";
+import Profile from "./assets/component/Profile";
 
 function App() {
   // LocalStorage se jobs load karna
@@ -45,7 +47,18 @@ function App() {
             />
           }
         />
+      <Route
+      path="/analytics"
+      element={<Analytics jobs={jobs} />}
+/>
+     
+     <Route path="/profile" element={<Profile />} />
+        
+
       </Routes>
+
+    
+
     </BrowserRouter>
   );
 }
