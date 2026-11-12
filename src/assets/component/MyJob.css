@@ -137,3 +137,80 @@
   color: white;
   cursor: pointer;
 }
+
+/* ====================================== */
+
+
+/* ================= SEARCH & FILTER ================= */
+
+.search-filter-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 25px 0;
+  width: 80%;
+}
+
+/* Search Input */
+
+.search-filter-container input {
+  flex: 1;
+  padding: 13px 18px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  background-color: white;
+  color: #333;
+  transition: 0.3s;
+}
+
+.search-filter-container input::placeholder {
+  color: #9ca3af;
+}
+
+.search-filter-container input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.2);
+}
+
+/* Status Dropdown */
+
+.search-filter-container select {
+  width: 180px;
+  padding: 13px 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  background-color: white;
+  font-size: 15px;
+  color: #333;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-filter-container select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.2);
+}
+
+/* Hover Effect */
+
+.search-filter-container input:hover,
+.search-filter-container select:hover {
+  border-color: #2563eb;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 600px) {
+  .search-filter-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-filter-container input,
+  .search-filter-container select {
+    width: 100%;
+  }
+}

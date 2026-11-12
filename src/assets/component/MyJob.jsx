@@ -2,8 +2,15 @@ import { useState } from "react";
 import "./MyJob.css";
 
 function MyJobs({ jobs, setJobs }) {
+
   const [editingId, setEditingId] = useState(null);
   const [selectedStatus, setSelectedStatus] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
+  const [statusFilter, setStatusFilter] = useState("All");
+  
+
+
+
 
   // Edit button
   const startEdit = (job) => {
@@ -44,18 +51,54 @@ function MyJobs({ jobs, setJobs }) {
     setSelectedStatus("");
   };
 
+  const filteredJobs = jobs.filter((job) => {
+
+  const matchesSearch = job.company
+    .toLowerCase()
+    .includes(searchTerm.toLowerCase());
+
+  const matchesStatus =
+    statusFilter === "All" ||
+    job.status === statusFilter;
+
+  return matchesSearch && matchesStatus;
+});
+
+
   return (
     <div className="my-jobs-page">
 
       <h1>My Jobs 💼</h1>
+       
+      <div className="search-filter-container">
 
+  <input
+    type="text"
+    placeholder="🔍 Search company name..."
+    value={searchTerm}
+    onChange={(e) => setSearchTerm(e.target.value)}
+  />
+
+  <select
+    value={statusFilter}
+    onChange={(e) => setStatusFilter(e.target.value)}
+  >
+    <option value="All">All Jobs</option>
+    <option value="Applied">Applied</option>
+    <option value="Interview">Interview</option>
+    <option value="Offer">Offer</option>
+    <option value="Rejected">Rejected</option>
+  </select>
+
+</div>
+     
       <div className="jobs-container">
 
         {jobs.length === 0 ? (
           <h2>No Jobs Added Yet!</h2>
         ) : (
 
-          jobs.map((job) => (
+          filteredJobs.map((job) => (
 
             <div className="job-card" key={job.id}>
 
